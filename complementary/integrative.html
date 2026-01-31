@@ -143,6 +143,22 @@
   }
   .cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
   .cta:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(59,130,246,.35)}
+
+    .home-link{
+      position:fixed;left:14px;top:14px;z-index:50;
+      width:40px;height:40px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      background:#fff;border:1px solid var(--line);
+      text-decoration:none;
+    }
+    .home-link svg{width:22px;height:22px;fill:#374151}
+
+    @media (max-width:760px){
+      .layout{grid-template-columns:1fr}
+      .resource-grid{grid-template-columns:1fr}
+    }
+
+  
 </style>
 </head>
 
