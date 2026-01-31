@@ -1,4 +1,3 @@
-<!-- File: /public/read-more-resources.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +16,6 @@
     .container{max-width:1100px;margin:42px auto;padding:0 20px}
     .layout{display:grid;grid-template-columns:1fr 380px;gap:42px;align-items:start}
 
-    /* LEFT card */
     .info-card{
       background:var(--panel);
       border:2px solid var(--panel-border);
@@ -27,7 +25,6 @@
     }
     .section-title{font-weight:800;margin:0 0 14px 0;font-size:22px}
 
-    /* Resource tiles (now 3 columns) */
     .resource-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:24px}
     .resource{display:block;text-decoration:none;color:inherit}
     .thumb{
@@ -38,7 +35,6 @@
     .caption{text-align:center;font-weight:700;margin-top:10px;font-size:18px}
     .divider{height:1px;background:repeating-linear-gradient(to right, #cfd5dd 0 6px, transparent 6px 12px);opacity:.9;margin:22px 0}
 
-    /* RIGHT column (CTA buttons) */
     .side{display:flex;flex-direction:column;gap:28px;align-items:flex-start}
     .cta{
       display:inline-block;text-decoration:none;color:#fff;font-weight:700;font-size:20px;
@@ -50,19 +46,11 @@
     }
     .cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
     .cta:focus-visible{outline:none;box-shadow:var(--ring)}
-    .cta.active{
-      filter:brightness(1.15);
-      background:linear-gradient(180deg,#cfe3f7,#e7f1fb);
-      color:#1f2937; text-shadow:none; outline-width:2px;
-    }
 
-    /* Right image */
     .pic-wrap{width:100%;max-width:170px}
     .pic-link{display:block;border:2px solid var(--panel-border);border-radius:10px;overflow:hidden;aspect-ratio:1/1;background:#f3f4f6}
     .pic{width:100%;height:100%;object-fit:contain;display:block}
-    .pic-cap{font-size:14px;color:var(--muted);margin-top:8px;text-align:center}
 
-    /* Home (same size as other pages) */
     .home-link{
       position:fixed; inset:14px auto auto 14px; z-index:50;
       display:inline-flex; align-items:center; justify-content:center;
@@ -76,36 +64,42 @@
 
     @media (max-width:760px){
       .layout{grid-template-columns:1fr;gap:28px}
-      .resource-grid{grid-template-columns:1fr} /* Stacks images vertically on small screens */
+      .resource-grid{grid-template-columns:1fr}
       .side .cta{width:100%;min-width:unset}
       .pic-wrap{max-width:100%}
     }
   </style>
 </head>
+
 <body>
-  <!-- Home button -->
-  <a class="home-link" href="https://ilonafridman.github.io/BreastCare.github.io/home.html" aria-label="Go to Home">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1 2.5 10.1a1 1 0 0 0-.4.8v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h5.9a1 1 0 0 0 1-1v-9a1 1 0 0 0-.4-.8L12 3.1z"/></svg>
+  <!-- Home button: one level up from /treatment/ -->
+  <a class="home-link" href="../home.html" aria-label="Go to Home">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3.1 2.5 10.1a1 1 0 0 0-.4.8v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h5.9a1 1 0 0 0 1-1v-9a1 1 0 0 0-.4-.8L12 3.1z"/>
+    </svg>
   </a>
 
   <main class="container">
     <section class="layout">
+
       <article class="info-card" aria-label="Helpful information links">
         <h3 class="section-title">Information to Explore</h3>
 
         <div class="resource-grid">
-            <a class="resource" target="_blank" rel="noopener noreferrer"
-             href=https://www.cancer.org/cancer/managing-cancer/side-effects.html>
+
+          <a class="resource" target="_blank" rel="noopener noreferrer"
+             href="https://www.cancer.org/cancer/managing-cancer/side-effects.html">
             <div class="thumb">
-              <img alt="treatments side effects from ACS" src="https://ilonafridman.github.io/BreastCare.github.io/treatment/ACS_treatment.jpg"/>
+              <!-- image in SAME folder -->
+              <img alt="treatments side effects from ACS" src="./ACS_treatment.jpg" />
             </div>
             <div class="caption">Managing cancer-related side effects from the American Cancer Society</div>
           </a>
-          
+
           <a class="resource" target="_blank" rel="noopener noreferrer"
              href="https://www.cancersupportcommunity.org/managing-side-effects">
             <div class="thumb">
-              <img alt="treatment side effects CSC" src="https://ilonafridman.github.io/BreastCare.github.io/treatment/CSC_treatment.jpg" />
+              <img alt="treatment side effects CSC" src="./CSC_treatment.jpg" />
             </div>
             <div class="caption">Navigating cancer from the Cancer Support Community</div>
           </a>
@@ -113,29 +107,28 @@
           <a class="resource" target="_blank" rel="noopener noreferrer"
              href="https://www.mdanderson.org/podcast.html">
             <div class="thumb">
-              <img alt="podcast" src="https://ilonafridman.github.io/BreastCare.github.io/treatment/podcast.jpg" />
+              <img alt="podcast" src="./podcast.jpg" />
             </div>
             <div class="caption">CancerWise podcast from the MD Anderson Cancer Center</div>
           </a>
 
-        
         </div>
 
         <div class="divider" role="presentation"></div>
       </article>
 
       <aside class="side" aria-label="Actions">
-        <a class="cta" href="https://ilonafridman.github.io/BreastCare.github.io/home.html">Go back to the beginning</a>
-        <a class="cta" href="https://ilonafridman.github.io/BreastCare.github.io/treatment/treatment.html">Go back to questions</a>
+        <a class="cta" href="../home.html">Go back to the beginning</a>
+        <a class="cta" href="./treatment.html">Go back to questions</a>
 
         <div class="pic-wrap">
           <a class="pic-link" target="_blank" rel="noopener noreferrer"
-             href="https://ilonafridman.github.io/BreastCare.github.io/diagnosis/Patient%20with%20Computer.jpg">
-            <img class="pic" src="https://ilonafridman.github.io/BreastCare.github.io/diagnosis/Patient%20with%20Computer.jpg" alt="Patient at a computer" />
+             href="../diagnosis/Patient%20with%20Computer.jpg">
+            <img class="pic" src="../diagnosis/Patient%20with%20Computer.jpg" alt="Patient at a computer" />
           </a>
-      
         </div>
       </aside>
+
     </section>
   </main>
 
